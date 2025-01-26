@@ -1,0 +1,12 @@
+.file-list {
+  margin-top: 20px;
+}
+
+.file-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.file-item:hover {
+  background-color: #f8f9fa;
+}
