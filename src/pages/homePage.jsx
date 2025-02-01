@@ -1,29 +1,27 @@
+// src/pages/homePage.jsx
 import React from 'react';
-import { FileList } from '../features/s3/s3components/FileList';
-import FileUploader from '../features/components/FileUploader';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody } from 'reactstrap';
+import DocumentUploader from '../components/DocumentUploader';
 
 const HomePage = () => {
   return (
-    <div>
-          <h2>Upload Your Documents</h2>
-          <h3>By uploading your documents you will be storing them in an S3 bucket</h3>
-      <Container fluid>
-        <Row className="g-4">  
-          <Col md="6">
-            <div className="p-3">  
-              <FileUploader />
-            </div>
-          </Col>
-
-          <Col md="6">
-            <div className="p-3">
-              <FileList />
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <Container className="mt-4">
+      <Row>
+        <Col>
+          <Card className="shadow-sm">
+            <CardBody>
+              <h2 className="mb-3">Upload Your Documents</h2>
+              <h5 className="text-muted mb-4">
+                By uploading your documents you will be storing them in an S3 bucket
+              </h5>
+              <div className="mt-4">
+                <DocumentUploader />
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
